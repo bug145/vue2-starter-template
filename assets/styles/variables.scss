@@ -1,0 +1,6 @@
+@use "../../node_modules/@sass-collective/breakpoint" with (
+  $screens: (
+    "3xl": 1920px,
+    "macbook": 1600,
+  )
+);
