@@ -160,6 +160,8 @@ module.exports = {
         extensions: ['.js', '.vue'],
       },
     },
-    'import/core-modules': [],
+    'import/core-modules': [
+      'vuex',
+    ],
   },
 };

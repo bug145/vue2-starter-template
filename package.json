@@ -1,6 +1,6 @@
 {
   "name": "vue2-starter-template",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -11,7 +11,8 @@
     "lint": "yarn lint:js",
     "lintfix": "yarn lint:js --fix",
     "prepare": "husky install",
-    "analyze": "nuxt build --analyze"
+    "analyze": "nuxt build --analyze",
+    "update": "yarn upgrade flux-ui-kit@latest"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint --cache"
@@ -19,16 +20,17 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/style-resources": "^1.2.1",
+    "@sass-collective/breakpoint": "^2.4.1",
+    "consola": "^3.2.3",
     "core-js": "^3.25.3",
-    "nuxt": "^2.15.8",
-    "vue": "^2.7.10",
-    "vue-server-renderer": "^2.7.10",
-    "vue-template-compiler": "^2.7.10",
-    "vue-animate-transitions": "^1.1.2",
     "lodash": "^4.17.21",
     "normalize.css": "^8.0.1",
-    "@nuxtjs/style-resources": "^1.2.1",
-    "@sass-collective/breakpoint": "^2.4.1"
+    "nuxt": "^2.15.8",
+    "vue": "^2.7.10",
+    "vue-animate-transitions": "^1.1.2",
+    "vue-server-renderer": "^2.7.10",
+    "vue-template-compiler": "^2.7.10"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
@@ -37,11 +39,11 @@
     "@nuxtjs/eslint-config": "^11.0.0",
     "@nuxtjs/eslint-module": "^3.1.0",
     "eslint": "^8.24.0",
-    "eslint-plugin-nuxt": "^4.0.0",
-    "eslint-plugin-vue": "^9.5.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-import-resolver-nuxt": "^1.0.1",
     "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-vue": "^9.5.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "sass": "^1.66.1",

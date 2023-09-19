@@ -22,6 +22,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '@/plugins/vuex', ssr: true },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -45,15 +46,23 @@ export default {
     '@nuxtjs/pwa',
   ],
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {
-    baseURL: '/',
-  },
+  store: {},
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
       lang: 'en',
+    },
+  },
+
+  privateRuntimeConfig: {
+    axios: {
+      baseURL: process.env.BASE_API_URL,
+    },
+  },
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: process.env.BASE_API_URL,
     },
   },
 
